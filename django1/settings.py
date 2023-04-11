@@ -23,6 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-cmuim(^1=y!4(j7+v8&2jk1f!@k8dp3&rej(e(cav6(npkn6zd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+#  DEBUG COM VALOR TRUE = DESENVOLVIMENTO
+# DEBUG COM VALOR FALSE = PRODUÇÃO
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
@@ -116,8 +118,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
-
+STATIC_URL = 'static/'  # usado durante o desenvolvimento
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # usado durante a produção
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
